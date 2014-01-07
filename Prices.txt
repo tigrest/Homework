@@ -1,0 +1,24 @@
+package kodutöö;
+
+public class Prices {
+static double desPrice;
+static String kat="üksi";
+static String kat1="kaksi";
+static String kat2="kolmi";
+public static String vordlus(double desPrice) {
+	if (desPrice<20) {
+		
+		return kat1;
+	}
+	if (desPrice>20&&desPrice<=50) {
+		
+		return kat2;
+	}
+	else  
+		
+	return kat;
+		
+	}
+	
+	
+}

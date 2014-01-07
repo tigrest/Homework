@@ -1,0 +1,31 @@
+package kodutöö;
+import java.util.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+			System.out.println("Tere! Aitan Teil valida sobiva kingituse Jõuludeks. Mis kuup2ev täna on? Palun sisesta ainult kuupäeva number (nt. 15) ");
+			int date = in.nextInt();
+			
+			if (aegSaabOtsa(date)) {
+	        	System.out.println("Jäid hiljaks, proovi järgmine aasta uuesti");
+	        	
+	        	//programm lõpetab oma töö
+	        }
+			else System.out.println("Kui palju soovid kulutada kingituse peale? Sisesta ainult number");
+	        double desPrice=in.nextDouble();
+			 //paneb vastava kategooriasse
+	        String kategor=(Prices.vordlus(desPrice));
+			System.out.println("Antud hinnakategoorias oleks sobilik kingitus "+Kingitused.valik(kategor));
+			
+	}
+
+	public static boolean aegSaabOtsa( int kuupaev) {
+		  if ( kuupaev>23) {
+		  return true;
+		  }
+		  return false;
+		  
+		}
+	}

@@ -1,0 +1,29 @@
+package kodutöö;
+
+import java.util.Random;
+
+public class Kingitused {
+static String[]kat3={"kinkekaart","lauamäng","digitaalne äratuskell"};
+static String[]kat4={"jõuluehted","küünal","fotoalbum"};
+static String[]kat5={"velotrenazöör","tahvelarvuti","SPA-pakett"};
+
+public static String valik(String kategor) {
+	String finale="";
+	
+	if (kategor.equals("kolmi")) {
+		int indeks=new Random().nextInt(kat3.length);
+		 finale=(kat3[indeks]);
+	}
+	if (kategor.equals("kaksi")) {
+		int indeks=new Random().nextInt(kat4.length);
+		 finale=(kat4[indeks]);
+	}
+	if (kategor.equals("üksi")) {
+		int indeks=new Random().nextInt(kat5.length);
+		 finale=(kat5[indeks]);
+	}
+	
+	
+return finale;	
+}
+}
